@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaishnavi’s Career Assistant</title>
+
+  <!-- Dialogflow Messenger -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+
+      /* Background: gradient overlay + your uploaded photo */
+      background: linear-gradient(rgba(255,255,255,0.75), rgba(240,248,255,0.85)),
+                  url("myimg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: #0b3b66;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 28px;
+      background: rgba(255,255,255,0.6);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+      background: rgba(255,255,255,0.6);
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+
+      /* Theme variables */
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans, Arial, sans-serif;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Hello 👋, welcome to my Career Assistant chatbot!</h1>
+  <p>Ask me about my skills, projects, experience, education, or career goals.</p>
+
+  <!-- Dialogflow chatbot -->
+  <df-messenger
+    location="us-central1"
+    project-id="artful-reactor-471705-t8"
+    agent-id="237cec81-11ca-48e3-9164-612830b375f4"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="CareerAssistant_Vaishnavi"></df-messenger-chat-bubble>
+  </df-messenger>
+</body>
+</html>
